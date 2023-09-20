@@ -7,6 +7,7 @@ import com.maldonadoismael.proyectosegundasemana.data.model.Client;
 public interface IClientService {
 
     public List<Client> listAllClients();
-    // public Client addNewClient();
+
+    public Client saveNewClient(Client client);
 
 }

@@ -17,14 +17,31 @@
             <h1 class="text-center">Add a new client</h1>
             <div class="card-body">
                 <form th:action="@{/clients}" th:object="${client}" method="post">
+
+                    <br>
+
                     <div class="form-group">
                         <label>Name: </label>
                         <input type="text" name="name" th:field="*{name}" class="form-control"
                             placeholder="Enter the new client's name" required>
+                    </div>
+
+                    <br>
+
+                    <div class="form-group">
                         <label>Surname: </label>
                         <input type="text" name="surname" th:field="*{surname}" class="form-control"
                             placeholder="Enter the new client's surname" required>
                     </div>
+
+                    <br>
+
+                    <div class="box-footer">
+
+                        <button class="btn btn-success">Save</button>
+                    </div>
+
+
 
                 </form>
 
