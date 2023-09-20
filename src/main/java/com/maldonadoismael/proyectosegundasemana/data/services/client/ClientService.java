@@ -19,4 +19,9 @@ public class ClientService implements IClientService {
         return clientRepository.findAll();
     }
 
+    // @Override
+    // public Client addNewClient(Client client) {
+    // return clientRepository.save(client);
+    // }
+
 }
