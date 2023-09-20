@@ -35,6 +35,13 @@ public class ClientController {
         return "clients";
     }
 
+    /**
+     * Handles the GET request for showing a form to add a new client.
+     *
+     * @param model The model to be used for rendering the form view.
+     * @return The form view template.
+     */
+
     @GetMapping("/clients/new")
     public String showAddNewClientForm(Model model) {
         Client client = new Client();
@@ -42,17 +49,41 @@ public class ClientController {
         return "new_client";
     }
 
+    /**
+     * Handles the POST request for saving a new client.
+     *
+     * @param client The client object to be saved.
+     * @return A redirection to the list of clients after saving.
+     */
+
     @PostMapping("/clients")
     public String saveNewClient(@ModelAttribute("client") Client client) {
         clientService.saveNewClient(client);
         return "redirect:/clients";
     }
 
+    /**
+     * Handles the GET request for showing a form to edit an existing client.
+     *
+     * @param id    The ID of the client to be edited.
+     * @param model The model to be used for rendering the edit form view.
+     * @return The form view template.
+     */
+
     @GetMapping("/clients/edit/{id}")
     public String showEditClientForm(@PathVariable Long id, Model model) {
         model.addAttribute("client", clientService.getClientByID(id));
         return "edit_client";
     }
+
+    /**
+     * Handles the POST request for updating an existing client.
+     *
+     * @param id     The ID of the client to be updated.
+     * @param client The updated client object.
+     * @param model  The model to be used for rendering the view.
+     * @return A redirection to the list of clients after updating.
+     */
 
     @PostMapping("/clients/{id}")
     public String updateClient(@PathVariable Long id, @ModelAttribute("client") Client client, Model model) {
@@ -63,6 +94,15 @@ public class ClientController {
         clientService.updateClient(existingClient);
         return "redirect:/clients";
     }
+
+    /**
+     * Handles the POST request for updating an existing client.
+     *
+     * @param id     The ID of the client to be updated.
+     * @param client The updated client object.
+     * @param model  The model to be used for rendering the view.
+     * @return A redirection to the list of clients after updating.
+     */
 
     @GetMapping("/clients/{id}")
     public String deleteClient(@PathVariable Long id) {
