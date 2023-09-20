@@ -10,4 +10,10 @@ public interface IClientService {
 
     public Client saveNewClient(Client client);
 
+    public Client getClientByID(Long id);
+
+    public Client updateClient(Client client);
+
+    public void deleteClient(Long id);
+
 }

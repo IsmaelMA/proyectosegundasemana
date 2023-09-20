@@ -24,4 +24,19 @@ public class ClientService implements IClientService {
         return clientRepository.save(client);
     }
 
+    @Override
+    public Client getClientByID(Long id) {
+        return clientRepository.findById(id).get();
+    }
+
+    @Override
+    public Client updateClient(Client client) {
+        return clientRepository.save(client);
+    }
+
+    @Override
+    public void deleteClient(Long id) {
+        clientRepository.deleteById(id);
+    }
+
 }
