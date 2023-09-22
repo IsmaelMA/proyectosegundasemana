@@ -4,7 +4,7 @@
 <h3>Teacher: Carlos Arranz</h3>
 <h4>Company: Sinensia</h4>
 
-This project is a simple CRUD (Create, Read, Update, Delete) application developed using Spring Boot and relies on a local MySQL database.
+This project is a simple CRUD (Create, Read, Update, Delete) application developed using Spring Boot plus Thymeleaf and relies on a local MySQL database.
 
 ## Features
 
