@@ -1,1 +1,5 @@
-# Proyecto para la segunda semana de la formación "Master Java" impartido por Carlos Arranz de la empresa Sinensia  
+# Proyecto para la segunda semana de la formación "Master Java".
+
+
+<h2>Profesor: Carlos Arranz</h2>
+<h3>Empresa: Sinensia</h3>
